@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/commons-cli-1.3.1.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/groovy-2.4.12.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/groovy-json-2.4.12.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/groovy-xml-2.4.12.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/jcl-over-slf4j-1.7.21.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/slf4j-api-1.7.21.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/slf4j-nop-1.7.21.jar"/>
+	<classpathentry kind="lib" path="/mnt/hgfs/C/Users/StephenHawkins/Downloads/soa-model-distribution-1.6.1-bin/lib/soa-model-core-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
