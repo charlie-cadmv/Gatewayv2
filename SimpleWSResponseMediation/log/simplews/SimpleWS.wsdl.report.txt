@@ -1,0 +1,25 @@
+
+
+Importing file: /home/sthawkin/IBM/IIBT10/workspace/SimpleWS/SimpleWS.wsdl
+
+The WSDL import will proceed with bindings SimpleWSHttpBinding.
+Creating wsdl schema document for file:///home/sthawkin/IBM/IIBT10/workspace/SimpleWS/SimpleWS.wsdl.
+Parsing wsdl binding {http://SimpleWS}SimpleWSHttpBinding.
+Parsing wsdl binding input operation1.
+Parsing wsdl binding output operation1.
+Parsing wsdl binding input operation2.
+Parsing wsdl binding output operation2.
+Processing doc style for operation operation1.
+Processing doc style for operation operation2.
+Populating WSDL schema SimpleWS.xsd.
+Creating file SimpleWS.xsd in the workspace.
+Creating file /SimpleWSResponseMediation/SimpleWS_InlineSchema1.xsd in the workspace.
+Copying source WSDL SimpleWS.wsdl to SimpleWS.wsdl.
+
+Elapsed time processing this message definition file: 0.552 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
