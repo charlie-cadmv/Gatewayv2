@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="JCN_HOME/javacompute.jar"/>
+	<classpathentry kind="var" path="JCN_HOME/jplugin2.jar"/>
+	<classpathentry kind="var" path="COMMON_CLASSES_HOME/IntegrationAPI.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/WSIUtility"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/shared-classes/jackson-databind-2.11.1.jar"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/shared-classes/jackson-core-2.11.1.jar"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/shared-classes/jackson-annotations-2.11.1.jar"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/shared-classes/bcprov-jdk15on-166.jar"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/shared-classes/bcpkix-jdk15on-166.jar"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/shared-classes/java-jwt-3.11.0.jar"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/shared-classes/commons-codec-1.7.jar"/>
+	<classpathentry kind="con" path="com.ibm.etools.mft.uri.classpath.MBProjectReference"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/shared-classes/log4j-1.2.8.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
