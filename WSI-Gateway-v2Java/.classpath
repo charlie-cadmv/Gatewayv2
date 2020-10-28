@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="JCN_HOME/javacompute.jar"/>
+	<classpathentry kind="var" path="JCN_HOME/jplugin2.jar"/>
+	<classpathentry kind="var" path="COMMON_CLASSES_HOME/IntegrationAPI.jar"/>
+	<classpathentry kind="con" path="com.ibm.etools.mft.uri.classpath.MBProjectReference"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/WSIUtility"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/steve/shared-classes/json-20180813.jar"/>
+	<classpathentry kind="lib" path="/var/mqsi/config/dmv/shared-classes/log4j-1.2.8.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
