@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created by TIBCO WSDL--><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="generatedWSDL" targetNamespace="http://service.ipp.dmv.ca.gov" xmlns:ns0="http://applicationinfo.ipp.dmv.ca.gov" xmlns:ns1="http://dmv.ca.gov/message/document" xmlns:ns2="http://dmv.ca.gov/message/header" xmlns:ns3="http://dmv.ca.gov/message/status" xmlns:ns4="http://dmv.ca.gov/shoppingcart" xmlns:ns5="http://schema.ipp.dmv.ca.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.ipp.dmv.ca.gov">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="ippServiceConcrete_InlineSchema4.xsd"/>
+        <generatedXSD location="ippServiceConcrete_InlineSchema5.xsd"/>
+        <generatedXSD location="ippServiceConcrete_InlineSchema1.xsd"/>
+        <generatedXSD location="ippServiceConcrete_InlineSchema2.xsd"/>
+        <generatedXSD location="ippServiceConcrete_InlineSchema6.xsd"/>
+        <generatedXSD location="ippServiceConcrete_InlineSchema3.xsd"/>
+        <generatedXSD location="ippServiceConcrete_InlineSchema7.xsd"/>
+        <binding hasEncoding="false" imported="true" name="IPPServicePortType_EP" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+    <wsdl:types>
+        
+        
+        
+        
+        
+        
+        
+            <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://dmv.ca.gov/message/status" xmlns:tns="http://dmv.ca.gov/message/status">
+<xsd:include schemaLocation="ippServiceConcrete_InlineSchema4.xsd"/>
+    </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://dmv.ca.gov/shoppingcart" xmlns:ns0="http://dmv.ca.gov/shoppingcart">
+<xsd:include schemaLocation="ippServiceConcrete_InlineSchema5.xsd"/>
+    </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://applicationinfo.ipp.dmv.ca.gov" xmlns:tns="http://applicationinfo.ipp.dmv.ca.gov">
+<xsd:include schemaLocation="ippServiceConcrete_InlineSchema1.xsd"/>
+    </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://dmv.ca.gov/message/document" xmlns:Q1="http://dmv.ca.gov/message/header" xmlns:Q2="http://dmv.ca.gov/message/status" xmlns:tns="http://dmv.ca.gov/message/document">
+<xsd:import namespace="http://dmv.ca.gov/message/status" schemaLocation="ippServiceConcrete_InlineSchema4.xsd"/>
+<xsd:import namespace="http://dmv.ca.gov/message/header" schemaLocation="ippServiceConcrete_InlineSchema3.xsd"/>
+<xsd:include schemaLocation="ippServiceConcrete_InlineSchema2.xsd"/>
+    </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.ipp.dmv.ca.gov" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:ns0="http://dmv.ca.gov/message/document" xmlns:ns2="http://schema.ipp.dmv.ca.gov" xmlns:pref="http://dmv.ca.gov/shoppingcart" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xsd:import namespace="http://dmv.ca.gov/message/document" schemaLocation="ippServiceConcrete_InlineSchema2.xsd"/>
+<xsd:import namespace="http://schema.ipp.dmv.ca.gov" schemaLocation="ippServiceConcrete_InlineSchema7.xsd"/>
+<xsd:import namespace="http://dmv.ca.gov/shoppingcart" schemaLocation="ippServiceConcrete_InlineSchema5.xsd"/>
+<xsd:include schemaLocation="ippServiceConcrete_InlineSchema6.xsd"/>
+    </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://dmv.ca.gov/message/header" xmlns:tns="http://dmv.ca.gov/message/header">
+<xsd:include schemaLocation="ippServiceConcrete_InlineSchema3.xsd"/>
+    </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.ipp.dmv.ca.gov" xmlns="http://schema.ipp.dmv.ca.gov" xmlns:tns="http://applicationinfo.ipp.dmv.ca.gov">
+<xsd:import namespace="http://applicationinfo.ipp.dmv.ca.gov" schemaLocation="ippServiceConcrete_InlineSchema1.xsd"/>
+<xsd:include schemaLocation="ippServiceConcrete_InlineSchema7.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="getVeteranDecalsRequest">
+        <wsdl:part element="tns:GetVeteranDecalsRequest" name="request"/>
+    </wsdl:message>
+    <wsdl:message name="getVeteranDecalsResponse">
+        <wsdl:part element="tns:GetVeteranDecalsResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="ippServiceException">
+        <wsdl:part element="tns:IPPException" name="fault"/>
+    </wsdl:message>
+    <wsdl:message name="sequentialPlateRequest">
+        <wsdl:part element="tns:EligibleSequentialPlateReservationRequest" name="request"/>
+    </wsdl:message>
+    <wsdl:message name="sequentialPlateResponse">
+        <wsdl:part element="tns:EligibleSequentialPlateReservationResponse" name="response"/>
+    </wsdl:message>
+    
+    <wsdl:message name="validatePlateAndVin3Request">
+        <wsdl:part element="tns:ValidatePlateAndVin3Request" name="request"/>
+    </wsdl:message>
+    <wsdl:message name="validatePlateAndVin3Response">
+        <wsdl:part element="tns:ValidatePlateAndVin3Response" name="response"/>
+    </wsdl:message>
+    
+    <wsdl:message name="addToCartRequest">
+        <wsdl:part element="tns:AddToCartRequest" name="request"/>
+    </wsdl:message>
+    <wsdl:message name="addToCartResponse">
+        <wsdl:part element="tns:AddToCartResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="getPlateDetailsRequest">
+        <wsdl:part element="tns:GetPlateDetailsRequest" name="request"/>
+    </wsdl:message>
+    <wsdl:message name="getPlateDetailsResponse">
+        <wsdl:part element="tns:GetPlateDetailsResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:message name="personalizedPlateRequest">
+        <wsdl:part element="tns:EligiblePersonalizedPlateReservationRequest" name="request"/>
+    </wsdl:message>
+    <wsdl:message name="personalizedPlateResponse">
+        <wsdl:part element="tns:EligiblePersonalizedPlateReservationResponse" name="response"/>
+    </wsdl:message>
+    <wsdl:portType name="IPPServicePortType">
+        <wsdl:operation name="getVeteranDecals">
+            <wsdl:input message="tns:getVeteranDecalsRequest"/>
+            <wsdl:output message="tns:getVeteranDecalsResponse"/>
+            <wsdl:fault message="tns:ippServiceException" name="fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="eligibleSequentialPlateReservation">
+            <wsdl:input message="tns:sequentialPlateRequest"/>
+            <wsdl:output message="tns:sequentialPlateResponse"/>
+            <wsdl:fault message="tns:ippServiceException" name="fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="addToCart">
+            <wsdl:input message="tns:addToCartRequest"/>
+            <wsdl:output message="tns:addToCartResponse"/>
+            <wsdl:fault message="tns:ippServiceException" name="fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="getPlateDetails">
+            <wsdl:input message="tns:getPlateDetailsRequest"/>
+            <wsdl:output message="tns:getPlateDetailsResponse"/>
+            <wsdl:fault message="tns:ippServiceException" name="fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="eligiblePersonalizedPlateReservation">
+            <wsdl:input message="tns:personalizedPlateRequest"/>
+            <wsdl:output message="tns:personalizedPlateResponse"/>
+            <wsdl:fault message="tns:ippServiceException" name="fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="validatePlateAndVin3">
+            <wsdl:input message="tns:validatePlateAndVin3Request"/>
+            <wsdl:output message="tns:validatePlateAndVin3Response"/>
+            <wsdl:fault message="tns:ippServiceException" name="fault"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="IPPServicePortType_EP" type="tns:IPPServicePortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getVeteranDecals">
+            <wsdl:documentation/>
+            <soap:operation soapAction="getVeteranDecals" style="document"/>
+            <wsdl:input>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="response" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="eligibleSequentialPlateReservation">
+            <wsdl:documentation/>
+            <soap:operation soapAction="eligibleSequentialPlateReservation" style="document"/>
+            <wsdl:input>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="response" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="addToCart">
+            <wsdl:documentation/>
+            <soap:operation soapAction="addToCart" style="document"/>
+            <wsdl:input>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="response" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getPlateDetails">
+            <wsdl:documentation/>
+            <soap:operation soapAction="getPlateDetails" style="document"/>
+            <wsdl:input>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="response" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="eligiblePersonalizedPlateReservation">
+            <wsdl:documentation/>
+            <soap:operation soapAction="eligiblePersonalizedPlateReservation" style="document"/>
+            <wsdl:input>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="response" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        
+         <wsdl:operation name="validatePlateAndVin3">
+            <wsdl:documentation/>
+            <soap:operation soapAction="validatePlateAndVin3" style="document"/>
+            <wsdl:input>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="response" use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        
+    </wsdl:binding>
+    <wsdl:service name="IPPServicePortType">
+        <wsdl:port binding="tns:IPPServicePortType_EP" name="IPPServicePortType_EP">
+            <soap:address location="http://wsitbcou01d.dmv.ca.gov:8631/ippserviceporttype"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created by TIBCO WSDL--><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://dmv.ca.gov/message/status" xmlns:ns0="http://applicationinfo.ipp.dmv.ca.gov" xmlns:ns1="http://dmv.ca.gov/message/document" xmlns:ns2="http://dmv.ca.gov/message/header" xmlns:ns3="http://dmv.ca.gov/message/status" xmlns:ns4="http://dmv.ca.gov/shoppingcart" xmlns:ns5="http://schema.ipp.dmv.ca.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://dmv.ca.gov/message/status" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <xsd:complexType name="Status">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="code" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="success" type="xsd:boolean"/>
+                    <xsd:element minOccurs="0" name="updateCount" type="xsd:int"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="status" type="tns:Status"/>
+        </xsd:schema>

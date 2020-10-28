@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created by TIBCO WSDL--><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://dmv.ca.gov/message/header" xmlns:ns0="http://applicationinfo.ipp.dmv.ca.gov" xmlns:ns1="http://dmv.ca.gov/message/document" xmlns:ns2="http://dmv.ca.gov/message/header" xmlns:ns3="http://dmv.ca.gov/message/status" xmlns:ns4="http://dmv.ca.gov/shoppingcart" xmlns:ns5="http://schema.ipp.dmv.ca.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://dmv.ca.gov/message/header" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <xsd:complexType name="Header">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="system" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="transactionId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="lastModUser" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="lastModTime" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="ipAddress">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="7"/>
+                                <xsd:maxLength value="15"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="createdTime" type="xsd:dateTime"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="header" type="tns:Header"/>
+        </xsd:schema>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input derivedFrom="MB:JSON_schema_in_swagger_document" path="/IPPService.yaml" var="var1"/>
+    <input path="/IBMdefined/org/xmlsoap/schemas/soap/envelope/soapenv11.xsd" var="var5"/>
+    <input path="/ippServiceConcrete_InlineSchema6.xsd" var="var4"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var2"/>
+    <output derivedFrom="MB:JSON_schema_in_swagger_document" path="/IPPService.yaml" var="var3"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="eligibleSequentialPlateReservation_Mapping">
+        <input namespace="http://schemas.xmlsoap.org/soap/envelope/" path="$var5/mb:msg(Envelope,assembly,XMLNSC,Properties)" var="MessageAssembly">
+            <cast path="$MessageAssembly/Envelope/Body/any" qualifier="{http://service.ipp.dmv.ca.gov}EligibleSequentialPlateReservationResponse" ref="var4"/>
+        </input>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var2/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON1">
+            <cast derivedFrom="MB:JSON_operation_response" path="$ComIbmMessageAssembly_JSON1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}EligibleSequentialPlateReservationResponse" ref="var3"/>
+        </output>
+        <move>
+            <input path="$MessageAssembly/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON1/Properties"/>
+        </move>
+        <local>
+            <input path="$MessageAssembly/Envelope/Body/EligibleSequentialPlateReservationResponse/header"/>
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/header"/>
+            <move automap="true">
+                <input path="system"/>
+                <output path="system"/>
+            </move>
+            <move automap="true">
+                <input path="transactionId"/>
+                <output path="transactionId"/>
+            </move>
+            <move automap="true">
+                <input path="lastModUser"/>
+                <output path="lastModUser"/>
+            </move>
+            <move automap="true">
+                <input path="lastModTime"/>
+                <output path="lastModTime"/>
+            </move>
+            <move automap="true">
+                <input path="ipAddress"/>
+                <output path="ipAddress"/>
+            </move>
+            <move automap="true">
+                <input path="createdTime"/>
+                <output path="createdTime"/>
+            </move>
+        </local>
+        <local>
+            <input path="$MessageAssembly/Envelope/Body/EligibleSequentialPlateReservationResponse/status"/>
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/status"/>
+            <move automap="true">
+                <input path="code"/>
+                <output path="code"/>
+            </move>
+            <move automap="true">
+                <input path="description"/>
+                <output path="description"/>
+            </move>
+            <move automap="true">
+                <input path="success"/>
+                <output path="success"/>
+            </move>
+            <move automap="true">
+                <input path="updateCount"/>
+                <output path="updateCount"/>
+            </move>
+        </local>
+        <local>
+            <input path="$MessageAssembly/Envelope/Body/EligibleSequentialPlateReservationResponse/payload"/>
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/payload"/>
+            <move automap="true">
+                <input path="sequentialPlateResponse/approvalCode"/>
+                <output path="sequentialPlateResponse/approvalCode"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/authorizationStatus"/>
+                <output path="sequentialPlateResponse/authorizationStatus"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/crcdCmpltDte"/>
+                <output path="sequentialPlateResponse/crcdCmpltDte"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/crcdCmpltTme"/>
+                <output path="sequentialPlateResponse/crcdCmpltTme"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/eligibilityStatus"/>
+                <output path="sequentialPlateResponse/eligibilityStatus"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/fileCode"/>
+                <output path="sequentialPlateResponse/fileCode"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/licensePlateFormatNumber"/>
+                <output path="sequentialPlateResponse/licensePlateFormatNumber"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/plateNonBlnkNumber"/>
+                <output path="sequentialPlateResponse/plateNonBlnkNumber"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/sessionId"/>
+                <output path="sequentialPlateResponse/sessionId"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/spclPlateTypeCode"/>
+                <output path="sequentialPlateResponse/spclPlateTypeCode"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/vehicleIdLast3Digits"/>
+                <output path="sequentialPlateResponse/vehicleIdLast3Digits"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/vehicleTypeCode"/>
+                <output path="sequentialPlateResponse/vehicleTypeCode"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/vrMatch"/>
+                <output path="sequentialPlateResponse/vrMatch"/>
+            </move>
+            <move automap="true">
+                <input path="sequentialPlateResponse/wipMatch"/>
+                <output path="sequentialPlateResponse/wipMatch"/>
+            </move>
+        </local>
+    </mappingDeclaration>
+</mappingRoot>

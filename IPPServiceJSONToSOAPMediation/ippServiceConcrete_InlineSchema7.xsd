@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created by TIBCO WSDL--><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://schema.ipp.dmv.ca.gov" xmlns="http://schema.ipp.dmv.ca.gov" xmlns:ns0="http://applicationinfo.ipp.dmv.ca.gov" xmlns:ns1="http://dmv.ca.gov/message/document" xmlns:ns2="http://dmv.ca.gov/message/header" xmlns:ns3="http://dmv.ca.gov/message/status" xmlns:ns4="http://dmv.ca.gov/shoppingcart" xmlns:ns5="http://schema.ipp.dmv.ca.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://applicationinfo.ipp.dmv.ca.gov" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <xsd:import namespace="http://applicationinfo.ipp.dmv.ca.gov" schemaLocation="ippServiceConcrete_InlineSchema1.xsd"/>
+            <xsd:complexType name="PersonalizedPlateRequest">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="amountPaid" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="callerState" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="convFee" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="custFullName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="encryptedCardNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="fieldOfficeId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="fileCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="firstName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="formattedLicensePlate" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="giftGiverFirstName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="giftGiverLastName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="giftGiverMiddleName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="kidPlateCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="lastName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="licensePlateCustNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="meaningText" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="middleName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="officeId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="origFee" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="ownerAddress" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ownerCity" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ownerFirstName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ownerLastName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ownerMiddleName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ownerZip" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="phoneNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="plateFeeCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="plateType" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="plateTypeCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="procCd" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="resStatCd" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="sessionId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="veteranOrgCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="last3VehicleId" type="xsd:string"/>
+	<xsd:element minOccurs="0" name="licensePlate" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="PersonalizedPlateResponse">
+                <xsd:sequence>
+                    <xsd:element name="acceptablePlate" type="xsd:boolean"/>
+                    <xsd:element name="approvalCode" type="xsd:string"/>
+                    <xsd:element name="fileCode" type="xsd:string"/>
+                    <xsd:element name="i80Status" type="xsd:string"/>
+                    <xsd:element name="novaStatus" type="xsd:integer"/>
+                    <xsd:element name="responseStatus" type="xsd:string"/>
+                    <xsd:element name="resStatusCode" type="xsd:string"/>
+                    <xsd:element name="sessionId" type="xsd:string"/>
+                    <xsd:element name="vrMatch" type="xsd:boolean"/>
+                    <xsd:element name="wipMatch" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            
+             <xsd:complexType name="PlateAndVin3Request">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="last3VehicleId" type="xsd:string"/>
+	                <xsd:element minOccurs="0" name="licensePlate" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            
+            <xsd:complexType name="PlateAndVin3Response">
+                <xsd:sequence>
+                    <xsd:element name="statusCode" type="xsd:string"/>
+                    <xsd:element name="dupOrderDate" type="xsd:string"/>
+					<xsd:element name="dupOrderTime" type="xsd:string"/>
+					<xsd:element name="dupSpclPlateTypeCode" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            
+            
+            <xsd:complexType name="PlateDetails">
+                <xsd:sequence>
+                    <xsd:element name="per1PltFeeCodes" type="xsd:string"/>
+                    <xsd:element name="per2PltFeeCodes" type="xsd:string"/>
+                    <xsd:element name="plateCode" type="xsd:string"/>
+                    <xsd:element name="plateImage" type="xsd:string"/>
+                    <xsd:element name="plateInitialFee" type="xsd:string"/>
+                    <xsd:element name="plateLength" type="xsd:string"/>
+                    <xsd:element name="plateName" type="xsd:string"/>
+                    <xsd:element name="plateRenewalFee" type="xsd:string"/>
+                    <xsd:element name="plateReplFee" type="xsd:string"/>
+                    <xsd:element name="plateRetentionFee" type="xsd:string"/>
+                    <xsd:element name="plateType" type="xsd:string"/>
+                    <xsd:element name="seq1PltFeeCodes" type="xsd:string"/>
+                    <xsd:element name="seq2PltFeeCodes" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="SequentialPlateRequest">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="amountPaid" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="conFeeAmt" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="custName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="feeCd" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="fileCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="firstName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="kidPlateCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="last3VehicleId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="lastName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="licensePlate" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="licensePlateCustomerNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="licensePlateFormatNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="officeId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="phoneNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="plateTypeCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="processCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="resFeeAmt" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="resvStatusCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="spclPlateTypeCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="vehicleTypeCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="veteranOrgCode" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="SequentialPlateResponse">
+                <xsd:sequence>
+                    <xsd:element name="approvalCode" type="xsd:string"/>
+                    <xsd:element name="authorizationStatus" type="xsd:string"/>
+                    <xsd:element name="crcdCmpltDte" type="xsd:string"/>
+                    <xsd:element name="crcdCmpltTme" type="xsd:string"/>
+                    <xsd:element name="eligibilityStatus" type="xsd:string"/>
+                    <xsd:element name="fileCode" type="xsd:string"/>
+                    <xsd:element name="licensePlateFormatNumber" type="xsd:string"/>
+                    <xsd:element name="plateNonBlnkNumber" type="xsd:string"/>
+                    <xsd:element name="sessionId" type="xsd:string"/>
+                    <xsd:element name="spclPlateTypeCode" type="xsd:string"/>
+                    <xsd:element name="vehicleIdLast3Digits" type="xsd:string"/>
+                    <xsd:element name="vehicleTypeCode" type="xsd:string"/>
+                    <xsd:element name="vrMatch" type="xsd:boolean"/>
+                    <xsd:element name="wipMatch" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="VeteranDecals">
+                <xsd:sequence>
+                    <xsd:element name="decalCode" type="xsd:string"/>
+                    <xsd:element name="decalDescription" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="IppApplicationInfo" type="tns:IppApplicationInfo"/>
+            <xsd:element name="PersonalizedPlateRequest" type="PersonalizedPlateRequest"/>
+            <xsd:element name="PersonalizedPlateResponse" type="PersonalizedPlateResponse"/>
+            <xsd:element name="PlateAndVin3Request" type="PlateAndVin3Request"/>
+            <xsd:element name="PlateAndVin3Response" type="PlateAndVin3Response"/>
+            <xsd:element name="PlateDetails" type="PlateDetails"/>
+            <xsd:element name="SequentialPlateRequest" type="SequentialPlateRequest"/>
+            <xsd:element name="SequentialPlateResponse" type="SequentialPlateResponse"/>
+            <xsd:element name="VeteranDecals" type="VeteranDecals"/>
+        </xsd:schema>

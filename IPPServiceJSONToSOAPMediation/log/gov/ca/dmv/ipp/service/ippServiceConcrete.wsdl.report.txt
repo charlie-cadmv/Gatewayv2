@@ -1,0 +1,49 @@
+
+
+Importing file: /mnt/hgfs/C/Users/StephenHawkins/Downloads/WSI-IppWeb-2-master/WebContent/WEB-INF/wsdl/ippServiceConcrete.wsdl
+
+The WSDL import will proceed with bindings IPPServicePortType_EP.
+Creating wsdl schema document for file:///mnt/hgfs/C/Users/StephenHawkins/Downloads/WSI-IppWeb-2-master/WebContent/WEB-INF/wsdl/ippServiceConcrete.wsdl.
+Parsing wsdl binding {http://service.ipp.dmv.ca.gov}IPPServicePortType_EP.
+Parsing wsdl binding input getVeteranDecals.
+Parsing wsdl binding output getVeteranDecals.
+Parsing wsdl binding fault fault.
+Parsing wsdl binding input eligibleSequentialPlateReservation.
+Parsing wsdl binding output eligibleSequentialPlateReservation.
+Parsing wsdl binding fault fault.
+Parsing wsdl binding input addToCart.
+Parsing wsdl binding output addToCart.
+Parsing wsdl binding fault fault.
+Parsing wsdl binding input getPlateDetails.
+Parsing wsdl binding output getPlateDetails.
+Parsing wsdl binding fault fault.
+Parsing wsdl binding input eligiblePersonalizedPlateReservation.
+Parsing wsdl binding output eligiblePersonalizedPlateReservation.
+Parsing wsdl binding fault fault.
+Parsing wsdl binding input validatePlateAndVin3.
+Parsing wsdl binding output validatePlateAndVin3.
+Parsing wsdl binding fault fault.
+Processing doc style for operation getVeteranDecals.
+Processing doc style for operation eligibleSequentialPlateReservation.
+Processing doc style for operation addToCart.
+Processing doc style for operation getPlateDetails.
+Processing doc style for operation eligiblePersonalizedPlateReservation.
+Processing doc style for operation validatePlateAndVin3.
+Populating WSDL schema ippServiceConcrete.xsd.
+Creating file ippServiceConcrete.xsd in the workspace.
+Creating file /IPPServiceJSONToSOAPMediation/ippServiceConcrete_InlineSchema1.xsd in the workspace.
+Creating file /IPPServiceJSONToSOAPMediation/ippServiceConcrete_InlineSchema2.xsd in the workspace.
+Creating file /IPPServiceJSONToSOAPMediation/ippServiceConcrete_InlineSchema3.xsd in the workspace.
+Creating file /IPPServiceJSONToSOAPMediation/ippServiceConcrete_InlineSchema4.xsd in the workspace.
+Creating file /IPPServiceJSONToSOAPMediation/ippServiceConcrete_InlineSchema5.xsd in the workspace.
+Creating file ippServiceConcrete_InlineSchema6.xsd in the workspace.
+Creating file /IPPServiceJSONToSOAPMediation/ippServiceConcrete_InlineSchema7.xsd in the workspace.
+Copying source WSDL ippServiceConcrete.wsdl to ippServiceConcrete.wsdl.
+
+Elapsed time processing this message definition file: 0.374 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

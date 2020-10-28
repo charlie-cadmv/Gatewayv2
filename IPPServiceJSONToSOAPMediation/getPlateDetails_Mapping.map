@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input derivedFrom="MB:JSON_schema_in_swagger_document" path="/IPPService.yaml" var="var1"/>
+    <input path="/ippServiceConcrete_InlineSchema6.xsd" var="var4"/>
+    <output path="/IBMdefined/org/xmlsoap/schemas/soap/envelope/soapenv11.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="getPlateDetails_Mapping">
+        <input derivedFrom="MB:JSON_operation_name:getPlateDetails" namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties,LocalEnvironment)" var="ComIbmMessageAssembly_JSON">
+            <cast derivedFrom="MB:JSON_operation_request" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}GetPlateDetailsRequest" ref="var1"/>
+        </input>
+        <output namespace="http://schemas.xmlsoap.org/soap/envelope/" path="mb:msg(Envelope,assembly,XMLNSC,Properties)" var="MessageAssembly">
+            <cast path="$MessageAssembly/Envelope/Body/any" qualifier="{http://service.ipp.dmv.ca.gov}GetPlateDetailsRequest" ref="var4"/>
+        </output>
+        <task type="info">
+            <documentation description="The REST API input data of operation getPlateDetails.">This Task is provided to show the location of the REST API input data of operation getPlateDetails.
+The path and query parameters are provided under "Parameters".
+You may need to use these as inputs to your mappings.</documentation>
+            <input path="$ComIbmMessageAssembly_JSON/LocalEnvironment/REST/Input"/>
+        </task>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/Properties"/>
+            <output path="$MessageAssembly/Properties"/>
+        </move>
+        <local>
+            <input path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/header"/>
+            <output path="$MessageAssembly/Envelope/Body/GetPlateDetailsRequest/header"/>
+            <move automap="true">
+                <input path="system"/>
+                <output path="system"/>
+            </move>
+            <move automap="true">
+                <input path="transactionId"/>
+                <output path="transactionId"/>
+            </move>
+            <move automap="true">
+                <input path="lastModUser"/>
+                <output path="lastModUser"/>
+            </move>
+            <move automap="true">
+                <input path="lastModTime"/>
+                <output path="lastModTime"/>
+            </move>
+            <move automap="true">
+                <input path="ipAddress"/>
+                <output path="ipAddress"/>
+            </move>
+            <move automap="true">
+                <input path="createdTime"/>
+                <output path="createdTime"/>
+            </move>
+        </local>
+        <local>
+            <input path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/status"/>
+            <output path="$MessageAssembly/Envelope/Body/GetPlateDetailsRequest/status"/>
+            <move automap="true">
+                <input path="code"/>
+                <output path="code"/>
+            </move>
+            <move automap="true">
+                <input path="description"/>
+                <output path="description"/>
+            </move>
+            <move automap="true">
+                <input path="success"/>
+                <output path="success"/>
+            </move>
+            <move automap="true">
+                <input path="updateCount"/>
+                <output path="updateCount"/>
+            </move>
+        </local>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created by TIBCO WSDL--><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://applicationinfo.ipp.dmv.ca.gov" xmlns:ns0="http://applicationinfo.ipp.dmv.ca.gov" xmlns:ns1="http://dmv.ca.gov/message/document" xmlns:ns2="http://dmv.ca.gov/message/header" xmlns:ns3="http://dmv.ca.gov/message/status" xmlns:ns4="http://dmv.ca.gov/shoppingcart" xmlns:ns5="http://schema.ipp.dmv.ca.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://applicationinfo.ipp.dmv.ca.gov" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <xsd:complexType name="IppApplicationInfo">
+                <xsd:sequence>
+                    <xsd:element name="plateFlag" type="xsd:string"/>
+                    <xsd:element name="callerState" type="xsd:string"/>
+                    <xsd:element name="conFeeAmt" type="xsd:string"/>
+                    <xsd:element name="convFee" type="xsd:string"/>
+                    <xsd:element name="custFullName" type="xsd:string"/>
+                    <xsd:element name="custName" type="xsd:string"/>
+                    <xsd:element name="feeCd" type="xsd:string"/>
+                    <xsd:element name="fieldOfficeId" type="xsd:string"/>
+                    <xsd:element name="fieldOfficeName" type="xsd:string"/>
+                    <xsd:element name="fileCode" type="xsd:string"/>
+                    <xsd:element name="firstName" type="xsd:string"/>
+                    <xsd:element name="formattedLicensePlate" type="xsd:string"/>
+                    <xsd:element name="giftGiverFirstName" type="xsd:string"/>
+                    <xsd:element name="giftGiverLastName" type="xsd:string"/>
+                    <xsd:element name="giftGiverMiddleName" type="xsd:string"/>
+                    <xsd:element name="imageUrl" type="xsd:string"/>
+                    <xsd:element name="kidPlateCode" type="xsd:string"/>
+                    <xsd:element name="last3VehicleId" type="xsd:string"/>
+                    <xsd:element name="lastName" type="xsd:string"/>
+                    <xsd:element name="licensePlate" type="xsd:string"/>
+                    <xsd:element name="licensePlateCustomerNumber" type="xsd:string"/>
+                    <xsd:element name="licensePlateFormatNumber" type="xsd:string"/>
+                    <xsd:element name="licensePlateCustNumber" type="xsd:string"/>
+                    <xsd:element name="meaningText" type="xsd:string"/>
+                    <xsd:element name="middleName" type="xsd:string"/>
+                    <xsd:element name="officeId" type="xsd:string"/>
+                    <xsd:element name="origFee" type="xsd:string"/>
+                    <xsd:element name="ownerAddress" type="xsd:string"/>
+                    <xsd:element name="ownerCity" type="xsd:string"/>
+                    <xsd:element name="ownerFirstName" type="xsd:string"/>
+                    <xsd:element name="ownerLastName" type="xsd:string"/>
+                    <xsd:element name="ownerMiddleName" type="xsd:string"/>
+                    <xsd:element name="ownerZip" type="xsd:string"/>
+                    <xsd:element name="phoneNumber" type="xsd:string"/>
+                    <xsd:element name="plateFeeCode" type="xsd:string"/>
+                    <xsd:element name="plateType" type="xsd:string"/>
+                    <xsd:element name="plateTypeCode" type="xsd:string"/>
+                    <xsd:element name="plateName" type="xsd:string"/>
+                    <xsd:element name="procCd" type="xsd:string"/>
+                    <xsd:element name="processCode" type="xsd:string"/>
+                    <xsd:element name="resFeeAmt" type="xsd:string"/>
+                    <xsd:element name="resStatCd" type="xsd:string"/>
+                    <xsd:element name="resvStatusCode" type="xsd:string"/>
+                    <xsd:element name="sessionId" type="xsd:string"/>
+                    <xsd:element name="spclPlateTypeCode" type="xsd:string"/>
+                    <xsd:element name="vehicleTypeCode" type="xsd:string"/>
+                    <xsd:element name="veteranOrgCode" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="ippApplicationInfo" type="tns:IppApplicationInfo"/>
+        </xsd:schema>

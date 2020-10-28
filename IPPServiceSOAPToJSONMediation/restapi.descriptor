@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:restapiDescriptor xmlns="http://com.ibm.etools.mft.descriptor.base" xmlns:ns2="http://com.ibm.etools.mft.descriptor.restapi" definitionType="swagger_20" definitionFile="IPPService.yaml" implementation="gen/IPPServiceSOAPToJSONMedition.msgflow" https="false">
+    <ns2:operations>
+        <ns2:operation name="addToCart" implementation="addToCart.subflow"/>
+        <ns2:operation name="eligiblePersonalizedPlateReservation" implementation="eligiblePersonalizedPlateReservation.subflow"/>
+        <ns2:operation name="eligibleSequentialPlateReservation" implementation="eligibleSequentialPlateReservation.subflow"/>
+        <ns2:operation name="getPlateDetails" implementation="getPlateDetails.subflow"/>
+        <ns2:operation name="getVeteranDecals" implementation="getVeteranDecals.subflow"/>
+        <ns2:operation name="validatePlateAndVin3" implementation="validatePlateAndVin3.subflow"/>
+    </ns2:operations>
+    <ns2:errorHandlers/>
+</ns2:restapiDescriptor>

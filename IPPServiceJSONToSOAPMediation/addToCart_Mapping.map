@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input derivedFrom="MB:JSON_schema_in_swagger_document" path="/IPPService.yaml" var="var1"/>
+    <input path="/ippServiceConcrete_InlineSchema6.xsd" var="var4"/>
+    <output path="/IBMdefined/org/xmlsoap/schemas/soap/envelope/soapenv11.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="addToCart_Mapping">
+        <input derivedFrom="MB:JSON_operation_name:addToCart" namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties,LocalEnvironment)" var="ComIbmMessageAssembly_JSON">
+            <cast derivedFrom="MB:JSON_operation_request" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}AddToCartRequest" ref="var1"/>
+        </input>
+        <output namespace="http://schemas.xmlsoap.org/soap/envelope/" path="mb:msg(Envelope,assembly,XMLNSC,Properties)" var="MessageAssembly">
+            <cast path="$MessageAssembly/Envelope/Body/any" qualifier="{http://service.ipp.dmv.ca.gov}AddToCartRequest" ref="var4"/>
+        </output>
+        <task type="info">
+            <documentation description="The REST API input data of operation addToCart.">This Task is provided to show the location of the REST API input data of operation addToCart.
+The path and query parameters are provided under "Parameters".
+You may need to use these as inputs to your mappings.</documentation>
+            <input path="$ComIbmMessageAssembly_JSON/LocalEnvironment/REST/Input"/>
+        </task>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/Properties"/>
+            <output path="$MessageAssembly/Properties"/>
+        </move>
+        <local>
+            <input path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/header"/>
+            <output path="$MessageAssembly/Envelope/Body/AddToCartRequest/header"/>
+            <move automap="true">
+                <input path="system"/>
+                <output path="system"/>
+            </move>
+            <move automap="true">
+                <input path="transactionId"/>
+                <output path="transactionId"/>
+            </move>
+            <move automap="true">
+                <input path="lastModUser"/>
+                <output path="lastModUser"/>
+            </move>
+            <move automap="true">
+                <input path="lastModTime"/>
+                <output path="lastModTime"/>
+            </move>
+            <move automap="true">
+                <input path="ipAddress"/>
+                <output path="ipAddress"/>
+            </move>
+            <move automap="true">
+                <input path="createdTime"/>
+                <output path="createdTime"/>
+            </move>
+        </local>
+        <local>
+            <input path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/status"/>
+            <output path="$MessageAssembly/Envelope/Body/AddToCartRequest/status"/>
+            <move automap="true">
+                <input path="code"/>
+                <output path="code"/>
+            </move>
+            <move automap="true">
+                <input path="description"/>
+                <output path="description"/>
+            </move>
+            <move automap="true">
+                <input path="success"/>
+                <output path="success"/>
+            </move>
+            <move automap="true">
+                <input path="updateCount"/>
+                <output path="updateCount"/>
+            </move>
+        </local>
+        <local>
+            <input path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/payload"/>
+            <output path="$MessageAssembly/Envelope/Body/AddToCartRequest/payload"/>
+            <local>
+                <input path="User"/>
+                <output path="User"/>
+                <move automap="true">
+                    <input path="accessLevel"/>
+                    <output path="accessLevel"/>
+                </move>
+                <move automap="true">
+                    <input path="userId"/>
+                    <output path="userId"/>
+                </move>
+                <move automap="true">
+                    <input path="fullName"/>
+                    <output path="fullName"/>
+                </move>
+                <move automap="true">
+                    <input path="email"/>
+                    <output path="email"/>
+                </move>
+                <move automap="true">
+                    <input path="emailOptIn"/>
+                    <output path="emailOptIn"/>
+                </move>
+            </local>
+            <local>
+                <input path="OrderItem"/>
+                <output path="OrderItem"/>
+                <local>
+                    <input path="echeckPayment"/>
+                    <output path="echeckPayment"/>
+                    <move automap="true">
+                        <input path="acctHolderName"/>
+                        <output path="acctHolderName"/>
+                    </move>
+                    <move automap="true">
+                        <input path="amountPaid"/>
+                        <output path="amountPaid"/>
+                    </move>
+                    <move automap="true">
+                        <input path="authAttemptCount"/>
+                        <output path="authAttemptCount"/>
+                    </move>
+                    <move automap="true">
+                        <input path="bankAcctNum"/>
+                        <output path="bankAcctNum"/>
+                    </move>
+                    <move automap="true">
+                        <input path="bankRtngNum"/>
+                        <output path="bankRtngNum"/>
+                    </move>
+                    <move automap="true">
+                        <input path="merchantId"/>
+                        <output path="merchantId"/>
+                    </move>
+                    <move automap="true">
+                        <input path="officeId"/>
+                        <output path="officeId"/>
+                    </move>
+                    <move automap="true">
+                        <input path="orderNumber"/>
+                        <output path="orderNumber"/>
+                    </move>
+                    <move automap="true">
+                        <input path="techId"/>
+                        <output path="techId"/>
+                    </move>
+                    <move automap="true">
+                        <input path="terminalNumber"/>
+                        <output path="terminalNumber"/>
+                    </move>
+                    <move automap="true">
+                        <input path="transactionCompletedTime"/>
+                        <output path="transactionCompletedTime"/>
+                    </move>
+                    <move automap="true">
+                        <input path="transactionStatus"/>
+                        <output path="transactionStatus"/>
+                    </move>
+                    <move automap="true">
+                        <input path="vendorId"/>
+                        <output path="vendorId"/>
+                    </move>
+                </local>
+                <local>
+                    <input path="cardPayment"/>
+                    <output path="cardPayment"/>
+                    <move automap="true">
+                        <input path="accountBalance"/>
+                        <output path="accountBalance"/>
+                    </move>
+                    <move automap="true">
+                        <input path="accountType"/>
+                        <output path="accountType"/>
+                    </move>
+                    <move automap="true">
+                        <input path="amexCapCode"/>
+                        <output path="amexCapCode"/>
+                    </move>
+                    <move automap="true">
+                        <input path="amountPaid"/>
+                        <output path="amountPaid"/>
+                    </move>
+                    <move automap="true">
+                        <input path="approvalCode"/>
+                        <output path="approvalCode"/>
+                    </move>
+                    <move automap="true">
+                        <input path="authAttemptCount"/>
+                        <output path="authAttemptCount"/>
+                    </move>
+                    <move automap="true">
+                        <input path="authCode"/>
+                        <output path="authCode"/>
+                    </move>
+                    <move automap="true">
+                        <input path="authorizationRequestSentTime"/>
+                        <output path="authorizationRequestSentTime"/>
+                    </move>
+                    <move automap="true">
+                        <input path="authorizedAmount"/>
+                        <output path="authorizedAmount"/>
+                    </move>
+                    <move automap="true">
+                        <input path="authResponse"/>
+                        <output path="authResponse"/>
+                    </move>
+                    <move automap="true">
+                        <input path="authSource"/>
+                        <output path="authSource"/>
+                    </move>
+                    <move automap="true">
+                        <input path="avs"/>
+                        <output path="avs"/>
+                    </move>
+                    <move automap="true">
+                        <input path="avsResponse"/>
+                        <output path="avsResponse"/>
+                    </move>
+                    <move automap="true">
+                        <input path="bankNumber"/>
+                        <output path="bankNumber"/>
+                    </move>
+                    <move automap="true">
+                        <input path="cardExpirationMonth"/>
+                        <output path="cardExpirationMonth"/>
+                    </move>
+                    <move automap="true">
+                        <input path="cardExpirationYear"/>
+                        <output path="cardExpirationYear"/>
+                    </move>
+                    <move automap="true">
+                        <input path="cardNumber"/>
+                        <output path="cardNumber"/>
+                    </move>
+                    <move automap="true">
+                        <input path="cardSentTime"/>
+                        <output path="cardSentTime"/>
+                    </move>
+                    <move automap="true">
+                        <input path="cardType"/>
+                        <output path="cardType"/>
+                    </move>
+                    <move automap="true">
+                        <input path="creditCardResponseCode"/>
+                        <output path="creditCardResponseCode"/>
+                    </move>
+                    <move automap="true">
+                        <input path="cvv2"/>
+                        <output path="cvv2"/>
+                    </move>
+                    <move automap="true">
+                        <input path="cvv2Response"/>
+                        <output path="cvv2Response"/>
+                    </move>
+                    <move automap="true">
+                        <input path="deviceType"/>
+                        <output path="deviceType"/>
+                    </move>
+                    <move automap="true">
+                        <input path="error"/>
+                        <output path="error"/>
+                    </move>
+                    <move automap="true">
+                        <input path="fullName"/>
+                        <output path="fullName"/>
+                    </move>
+                    <move automap="true">
+                        <input path="keyPtr"/>
+                        <output path="keyPtr"/>
+                    </move>
+                    <move automap="true">
+                        <input path="merchantId"/>
+                        <output path="merchantId"/>
+                    </move>
+                    <move automap="true">
+                        <input path="msdi"/>
+                        <output path="msdi"/>
+                    </move>
+                    <move automap="true">
+                        <input path="officeId"/>
+                        <output path="officeId"/>
+                    </move>
+                    <move automap="true">
+                        <input path="orderNumber"/>
+                        <output path="orderNumber"/>
+                    </move>
+                    <move automap="true">
+                        <input path="pldSequenceNumber"/>
+                        <output path="pldSequenceNumber"/>
+                    </move>
+                    <move automap="true">
+                        <input path="ps2000Data"/>
+                        <output path="ps2000Data"/>
+                    </move>
+                    <move automap="true">
+                        <input path="recordNbr"/>
+                        <output path="recordNbr"/>
+                    </move>
+                    <move automap="true">
+                        <input path="referenceNbr"/>
+                        <output path="referenceNbr"/>
+                    </move>
+                    <move automap="true">
+                        <input path="responseCode"/>
+                        <output path="responseCode"/>
+                    </move>
+                    <move automap="true">
+                        <input path="surchargeInd"/>
+                        <output path="surchargeInd"/>
+                    </move>
+                    <move automap="true">
+                        <input path="techId"/>
+                        <output path="techId"/>
+                    </move>
+                    <move automap="true">
+                        <input path="terminalNumber"/>
+                        <output path="terminalNumber"/>
+                    </move>
+                    <move automap="true">
+                        <input path="traceNbr"/>
+                        <output path="traceNbr"/>
+                    </move>
+                    <move automap="true">
+                        <input path="transactionCompletedTime"/>
+                        <output path="transactionCompletedTime"/>
+                    </move>
+                    <move automap="true">
+                        <input path="transactionStatus"/>
+                        <output path="transactionStatus"/>
+                    </move>
+                    <move automap="true">
+                        <input path="transDate"/>
+                        <output path="transDate"/>
+                    </move>
+                    <move automap="true">
+                        <input path="transTime"/>
+                        <output path="transTime"/>
+                    </move>
+                    <move automap="true">
+                        <input path="vendorId"/>
+                        <output path="vendorId"/>
+                    </move>
+                </local>
+                <move>
+                    <input path="applicationInfo"/>
+                    <output path="applicationInfo"/>
+                </move>
+                <move>
+                    <input path="cartId"/>
+                    <output path="cartId"/>
+                </move>
+                <move>
+                    <input path="consolidated"/>
+                    <output path="consolidated"/>
+                </move>
+                <move>
+                    <input path="consolidatedItemNumber"/>
+                    <output path="consolidatedItemNumber"/>
+                </move>
+                <move>
+                    <input path="creationDate"/>
+                    <output path="creationDate"/>
+                </move>
+                <move>
+                    <input path="description"/>
+                    <output path="description"/>
+                </move>
+                <move>
+                    <input path="itemCd"/>
+                    <output path="itemCd"/>
+                </move>
+                <move>
+                    <input path="language"/>
+                    <output path="language"/>
+                </move>
+                <move>
+                    <input path="lastAccessDate"/>
+                    <output path="lastAccessDate"/>
+                </move>
+                <move>
+                    <input path="orderId"/>
+                    <output path="orderId"/>
+                </move>
+                <move>
+                    <input path="orderItemKey"/>
+                    <output path="orderItemKey"/>
+                </move>
+                <move>
+                    <input path="orderNumber"/>
+                    <output path="orderNumber"/>
+                </move>
+                <move>
+                    <input path="orderPrice"/>
+                    <output path="orderPrice"/>
+                </move>
+                <move>
+                    <input path="quantity"/>
+                    <output path="quantity"/>
+                </move>
+                <move>
+                    <input path="sequence"/>
+                    <output path="sequence"/>
+                </move>
+                <move>
+                    <input path="status"/>
+                    <output path="status"/>
+                </move>
+                <move>
+                    <input path="transactionType"/>
+                    <output path="transactionType"/>
+                </move>
+                <move>
+                    <input path="validationMessage"/>
+                    <output path="validationMessage"/>
+                </move>
+                <move>
+                    <input path="paymentType"/>
+                    <output path="paymentType"/>
+                </move>
+            </local>
+        </local>
+    </mappingDeclaration>
+</mappingRoot>

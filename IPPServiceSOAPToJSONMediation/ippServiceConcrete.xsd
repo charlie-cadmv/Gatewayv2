@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.ipp.dmv.ca.gov" xmlns:ns0="http://applicationinfo.ipp.dmv.ca.gov" xmlns:ns1="http://dmv.ca.gov/message/document" xmlns:ns2="http://dmv.ca.gov/message/header" xmlns:ns3="http://dmv.ca.gov/message/status" xmlns:ns4="http://dmv.ca.gov/shoppingcart" xmlns:ns5="http://schema.ipp.dmv.ca.gov" xmlns:tns="http://service.ipp.dmv.ca.gov">
+  <import namespace="http://schema.ipp.dmv.ca.gov" schemaLocation="ippServiceConcrete_InlineSchema7.xsd"/>
+  <include schemaLocation="ippServiceConcrete_InlineSchema6.xsd"/>
+  <import namespace="http://dmv.ca.gov/shoppingcart" schemaLocation="ippServiceConcrete_InlineSchema5.xsd"/>
+  <import namespace="http://dmv.ca.gov/message/status" schemaLocation="ippServiceConcrete_InlineSchema4.xsd"/>
+  <import namespace="http://dmv.ca.gov/message/header" schemaLocation="ippServiceConcrete_InlineSchema3.xsd"/>
+  <import namespace="http://dmv.ca.gov/message/document" schemaLocation="ippServiceConcrete_InlineSchema2.xsd"/>
+  <import namespace="http://applicationinfo.ipp.dmv.ca.gov" schemaLocation="ippServiceConcrete_InlineSchema1.xsd"/>
+
+<!-- BEGIN Global group petaining to all wsdl:message definitions -->
+<!-- END Global group -->
+
+
+<!-- BEGIN Message Definitions for the wsdl:operations  -->
+<!-- END Message Definitions -->
+
+
+</schema>

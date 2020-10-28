@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created by TIBCO WSDL--><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.ipp.dmv.ca.gov" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:ns0="http://dmv.ca.gov/message/document" xmlns:ns1="http://dmv.ca.gov/message/document" xmlns:ns2="http://schema.ipp.dmv.ca.gov" xmlns:ns3="http://dmv.ca.gov/message/status" xmlns:ns4="http://dmv.ca.gov/shoppingcart" xmlns:ns5="http://schema.ipp.dmv.ca.gov" xmlns:pref="http://dmv.ca.gov/shoppingcart" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.ipp.dmv.ca.gov" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://dmv.ca.gov/message/document" schemaLocation="ippServiceConcrete_InlineSchema2.xsd"/>
+            <xsd:import namespace="http://schema.ipp.dmv.ca.gov" schemaLocation="ippServiceConcrete_InlineSchema7.xsd"/>
+            <xsd:import namespace="http://dmv.ca.gov/shoppingcart" schemaLocation="ippServiceConcrete_InlineSchema5.xsd"/>
+            <xsd:complexType name="AddToCartRequest">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element ref="pref:User"/>
+                                        <xsd:element ref="pref:OrderItem"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AddToCartResponse">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="result" type="xs:boolean"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="EligiblePersonalizedPlateReservationRequest">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="personalizedPlateRequest" type="ns2:PersonalizedPlateRequest"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="EligiblePersonalizedPlateReservationResponse">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="personalizedPlateResponse" type="ns2:PersonalizedPlateResponse"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            
+            <xsd:complexType name="ValidatePlateAndVin3Request">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="plateAndVin3Request" type="ns2:PlateAndVin3Request"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="ValidatePlateAndVin3Response">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="plateAndVin3Response" type="ns2:PlateAndVin3Response"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            
+            
+            <xsd:complexType name="EligibleSequentialPlateReservationRequest">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="sequentialPlateRequest" type="ns2:SequentialPlateRequest"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="EligibleSequentialPlateReservationResponse">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="sequentialPlateResponse" type="ns2:SequentialPlateResponse"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="GetPlateDetailsRequest">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument"/>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="GetPlateDetailsResponse">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="plateDetails" type="ns2:PlateDetails"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="GetVeteranDecalsRequest">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument"/>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="GetVeteranDecalsResponse">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVMessageDocument">
+                        <xsd:sequence>
+                            <xsd:element name="payload">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="veteranDecals" type="ns2:VeteranDecals"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="IPPException">
+                <xsd:complexContent>
+                    <xsd:extension base="ns0:DMVFaultDocument"/>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:element ibmSchExtn:docRoot="true" name="AddToCartRequest" type="tns:AddToCartRequest"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="AddToCartResponse" type="tns:AddToCartResponse"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="EligiblePersonalizedPlateReservationRequest" type="tns:EligiblePersonalizedPlateReservationRequest"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="EligiblePersonalizedPlateReservationResponse" type="tns:EligiblePersonalizedPlateReservationResponse"/>
+            
+             <xsd:element ibmSchExtn:docRoot="true" name="ValidatePlateAndVin3Request" type="tns:ValidatePlateAndVin3Request"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="ValidatePlateAndVin3Response" type="tns:ValidatePlateAndVin3Response"/>
+            
+            <xsd:element ibmSchExtn:docRoot="true" name="EligibleSequentialPlateReservationRequest" type="tns:EligibleSequentialPlateReservationRequest"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="EligibleSequentialPlateReservationResponse" type="tns:EligibleSequentialPlateReservationResponse"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetPlateDetailsRequest" type="tns:GetPlateDetailsRequest"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetPlateDetailsResponse" type="tns:GetPlateDetailsResponse"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetVeteranDecalsRequest" type="tns:GetVeteranDecalsRequest"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="GetVeteranDecalsResponse" type="tns:GetVeteranDecalsResponse"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="IPPException" type="tns:IPPException"/>
+        </xsd:schema>

@@ -1,0 +1,1039 @@
+---
+swagger: "2.0"
+basePath: "/response/IppService"
+info:
+  description: "Simple API"
+  title: "IPPService"
+  version: "1.0"
+host: "192.168.50.131:7800"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+definitions:
+  Header:
+    properties:
+      system:
+        type: "string"
+      transactionId:
+        type: "string"
+      lastModUser:
+        type: "string"
+      lastModTime:
+        type: "string"
+        format: "date-time"
+      ipAddress:
+        type: "string"
+      createdTime:
+        type: "string"
+        format: "date-time"
+    required:
+    - "system"
+    - "transactionId"
+    - "lastModUser"
+    - "lastModTime"
+    - "ipAddress"
+    - "createdTime"
+  VeteranDecals:
+    properties:
+      decalCode:
+        type: "string"
+      decalDescription:
+        type: "string"
+    required:
+    - "decalCode"
+    - "decalDescription"
+  SequentialPlateRequest:
+    properties:
+      amountPaid:
+        type: "string"
+      conFeeAmt:
+        type: "number"
+        format: "double"
+      custName:
+        type: "string"
+      feeCd:
+        type: "string"
+      fileCode:
+        type: "string"
+      firstName:
+        type: "string"
+      kidPlateCode:
+        type: "string"
+      last3VehicleId:
+        type: "string"
+      lastName:
+        type: "string"
+      licensePlate:
+        type: "string"
+      licensePlateCustomerNumber:
+        type: "string"
+      licensePlateFormatNumber:
+        type: "string"
+      officeId:
+        type: "string"
+      phoneNumber:
+        type: "string"
+      plateTypeCode:
+        type: "string"
+      processCode:
+        type: "string"
+      resFeeAmt:
+        type: "number"
+        format: "double"
+      resvStatusCode:
+        type: "string"
+      spclPlateTypeCode:
+        type: "string"
+      vehicleTypeCode:
+        type: "string"
+      veteranOrgCode:
+        type: "string"
+    required:
+    - "amountPaid"
+    - "conFeeAmt"
+    - "custName"
+    - "feeCd"
+    - "fileCode"
+    - "firstName"
+    - "kidPlateCode"
+    - "last3VehicleId"
+    - "lastName"
+    - "licensePlate"
+    - "licensePlateCustomerNumber"
+    - "officeId"
+    - "phoneNumber"
+    - "plateTypeCode"
+    - "processCode"
+    - "resFeeAmt"
+    - "resvStatusCode"
+    - "spclPlateTypeCode"
+    - "vehicleTypeCode"
+    - "veteranOrgCode"
+  SequentialPlateResponse:
+    properties:
+      approvalCode:
+        type: "string"
+      authorizationStatus:
+        type: "string"
+      crcdCmpltDte:
+        type: "string"
+      crcdCmpltTme:
+        type: "string"
+      eligibilityStatus:
+        type: "string"
+      fileCode:
+        type: "string"
+      licensePlateFormatNumber:
+        type: "string"
+      plateNonBlnkNumber:
+        type: "string"
+      sessionId:
+        type: "string"
+      spclPlateTypeCode:
+        type: "string"
+      vehicleIdLast3Digits:
+        type: "string"
+      vehicleTypeCode:
+        type: "string"
+      vrMatch:
+        type: "boolean"
+      wipMatch:
+        type: "boolean"
+    required:
+    - "approvalCode"
+    - "authorizationStatus"
+    - "crcdCmpltDte"
+    - "crcdCmpltTme"
+    - "eligibilityStatus"
+    - "fileCode"
+    - "licensePlateFormatNumber"
+    - "plateNonBlnkNumber"
+    - "sessionId"
+    - "spclPlateTypeCode"
+    - "vehicleIdLast3Digits"
+    - "vehicleTypeCode"
+    - "vrMatch"
+    - "wipMatch"
+  PersonalizedPlateResponse:
+    properties:
+      acceptablePlate:
+        type: "boolean"
+      approvalCode:
+        type: "string"
+      fileCode:
+        type: "string"
+      I80Status:
+        type: "string"
+      novaStatus:
+        type: "integer"
+      responseStatus:
+        type: "string"
+      resStatusCode:
+        type: "string"
+      sessionId:
+        type: "string"
+      vrMatch:
+        type: "boolean"
+      wipMatch:
+        type: "boolean"
+    required:
+    - "acceptablePlate"
+    - "approvalCode"
+    - "fileCode"
+    - "I80Status"
+    - "novaStatus"
+    - "responseStatus"
+    - "resStatusCode"
+    - "sessionId"
+    - "vrMatch"
+    - "wipMatch"
+  PlateAndVin3Request:
+    properties:
+      last3VehicleId:
+        type: "string"
+      licensePlate:
+        type: "string"
+    required:
+    - "last3VehicleId"
+    - "licensePlate"
+  PlateAndVin3Response:
+    properties:
+      statusCode:
+        type: "string"
+      dupOrderDate:
+        type: "string"
+        format: "date-time"
+      dupOrderTime:
+        type: "string"
+      dupSpclPlateTypeCode:
+        type: "string"
+    required:
+    - "statusCode"
+    - "dupOrderDate"
+    - "dupOrderTime"
+    - "dupSpclPlateTypeCode"
+  PlateDetails:
+    properties:
+      per1PltFeeCodes:
+        type: "string"
+      per2PltFeeCodes:
+        type: "string"
+      plateCode:
+        type: "string"
+      plateImage:
+        type: "string"
+      plateInitialFee:
+        type: "string"
+      plateLength:
+        type: "string"
+      plateName:
+        type: "string"
+      plateRenewalFee:
+        type: "string"
+      plateReplFee:
+        type: "string"
+      plateRetentionFee:
+        type: "string"
+      plateType:
+        type: "string"
+      seq1PltFeeCodes:
+        type: "string"
+      seq2PltFeeCodes:
+        type: "string"
+    required:
+    - "per1PltFeeCodes"
+    - "per2PltFeeCodes"
+    - "plateCode"
+    - "plateImage"
+    - "plateInitialFee"
+    - "plateLength"
+    - "plateName"
+    - "plateRenewalFee"
+    - "plateReplFee"
+    - "plateRetentionFee"
+    - "plateType"
+    - "seq1PltFeeCodes"
+    - "seq2PltFeeCodes"
+  PersonalizedPlateRequest:
+    properties:
+      amountPaid:
+        type: "string"
+      callerState:
+        type: "string"
+      convFee:
+        type: "number"
+        format: "double"
+      custFullName:
+        type: "string"
+      encryptedCardNumber:
+        type: "string"
+      fieldOfficeId:
+        type: "string"
+      fileCode:
+        type: "string"
+      firstName:
+        type: "string"
+      formattedLicensePlate:
+        type: "string"
+      giftGiverFirstName:
+        type: "string"
+      giftGiverLastName:
+        type: "string"
+      giftGiverMiddleName:
+        type: "string"
+      kidPlateCode:
+        type: "string"
+      lastName:
+        type: "string"
+      licensePlateCustNumber:
+        type: "string"
+      meaningText:
+        type: "string"
+      middleName:
+        type: "string"
+      officeId:
+        type: "string"
+      origFee:
+        type: "number"
+        format: "double"
+      ownerAddress:
+        type: "string"
+      ownerCity:
+        type: "string"
+      ownerFirstName:
+        type: "string"
+      ownerLastName:
+        type: "string"
+      ownerMiddleName:
+        type: "string"
+      ownerZip:
+        type: "string"
+      phoneNumber:
+        type: "string"
+      plateFeeCode:
+        type: "string"
+      plateType:
+        type: "string"
+      plateTypeCode:
+        type: "string"
+      procCd:
+        type: "string"
+      resStatCd:
+        type: "string"
+      sessionId:
+        type: "string"
+      veteranOrgCode:
+        type: "string"
+      last3VehicleId:
+        type: "string"
+    required:
+    - "amountPaid"
+    - "callerState"
+    - "convFee"
+    - "custFullName"
+    - "encryptedCardNumber"
+    - "fieldOfficeId"
+    - "fileCode"
+    - "firstName"
+    - "formattedLicensePlate"
+    - "giftGiverFirstName"
+    - "giftGiverLastName"
+    - "giftGiverMiddleName"
+    - "kidPlateCode"
+    - "lastName"
+    - "licensePlateCustNumber"
+    - "meaningText"
+    - "middleName"
+    - "officeId"
+    - "origFee"
+    - "ownerAddress"
+    - "ownerCity"
+    - "ownerFirstName"
+    - "ownerLastName"
+    - "ownerMiddleName"
+    - "ownerZip"
+    - "phoneNumber"
+    - "plateFeeCode"
+    - "plateType"
+    - "procCd"
+    - "resStatCd"
+    - "sessionId"
+    - "veteranOrgCode"
+    - "last3VehicleId"
+  IppApplicationInfo:
+    properties:
+      plateFlag:
+        type: "string"
+      callerState:
+        type: "string"
+      conFeeAmt:
+        type: "string"
+      convFee:
+        type: "string"
+      custFullName:
+        type: "string"
+      custName:
+        type: "string"
+      feeCode:
+        type: "string"
+      fieldOfficeId:
+        type: "string"
+      fieldOfficeName:
+        type: "string"
+      fileCd:
+        type: "string"
+      firstName:
+        type: "string"
+      formattedLicensePlate:
+        type: "string"
+      giftGiverFirstName:
+        type: "string"
+      giftGiverLastName:
+        type: "string"
+      giftGiverMiddleName:
+        type: "string"
+      imageUrl:
+        type: "string"
+      kidPlateCode:
+        type: "string"
+      last3VehicleId:
+        type: "string"
+      lastName:
+        type: "string"
+      licensePlate:
+        type: "string"
+      licensePlateCustomerNumber:
+        type: "string"
+      licensePlateFormatNumber:
+        type: "string"
+      licensePlateCustNumber:
+        type: "string"
+      meaningText:
+        type: "string"
+      middleName:
+        type: "string"
+      officeId:
+        type: "string"
+      origFee:
+        type: "string"
+      ownerAddress:
+        type: "string"
+      ownerCity:
+        type: "string"
+      ownerFirstName:
+        type: "string"
+      ownerLastNam:
+        type: "string"
+      ownerMiddleName:
+        type: "string"
+      ownerZip:
+        type: "string"
+      phoneNumber:
+        type: "string"
+      plateFeeCode:
+        type: "string"
+      plateType:
+        type: "string"
+      plateTypeCode:
+        type: "string"
+      plateName:
+        type: "string"
+      procCd:
+        type: "string"
+      processCode:
+        type: "string"
+      resFeeAmt:
+        type: "string"
+      resStatCd:
+        type: "string"
+      resvStatusCode:
+        type: "string"
+      sessionId:
+        type: "string"
+      spclPlateTypeCode:
+        type: "string"
+      vehicleTypeCode:
+        type: "string"
+      veteranOrgCode:
+        type: "string"
+  ApplicationReceipt:
+    properties:
+      itemDescription:
+        type: "string"
+      itemPrice:
+        type: "number"
+      itemPr:
+        type: "number"
+      itemTransactionType:
+        type: "string"
+      message:
+        type: "string"
+      orderItemId:
+        type: "string"
+      orderItemKey:
+        type: "string"
+      status:
+        type: "string"
+      receiptItem:
+        type: "array"
+        items:
+          $ref: "#/definitions/ReceiptItem"
+      receiptLink:
+        $ref: "#/definitions/ReceiptLink"
+  OrderItem:
+    properties:
+      applicationInfo:
+        type: "string"
+      cartId:
+        type: "integer"
+      consolidated:
+        type: "boolean"
+      consolidatedItemNumber:
+        type: "integer"
+      creationDate:
+        type: "string"
+        format: "date-time"
+      description:
+        type: "string"
+      itemCd:
+        type: "string"
+      language:
+        type: "string"
+      lastAccessDate:
+        type: "string"
+        format: "date-time"
+      orderId:
+        type: "integer"
+      orderItemKey:
+        type: "string"
+      orderNumber:
+        type: "string"
+      orderPrice:
+        type: "number"
+      quantity:
+        type: "integer"
+      sequence:
+        type: "integer"
+      status:
+        type: "integer"
+      transactionType:
+        type: "string"
+      validationMessage:
+        type: "string"
+      echeckPayment:
+        $ref: "#/definitions/ECheckPayment"
+      cardPayment:
+        $ref: "#/definitions/CardPayment"
+      paymentType:
+        type: "string"
+    required:
+    - "applicationInfo"
+    - "cartId"
+    - "consolidated"
+    - "consolidatedItemNumber"
+    - "creationDate"
+    - "description"
+    - "itemCd"
+    - "language"
+    - "lastAccessDate"
+    - "orderId"
+    - "orderItemKey"
+    - "orderNumber"
+    - "orderPrice"
+    - "quantity"
+    - "sequence"
+    - "status"
+    - "transactionType"
+    - "validationMessage"
+    - "echeckPayment"
+    - "cardPayment"
+    - "paymentType"
+  User:
+    properties:
+      accessLevel:
+        type: "integer"
+      userId:
+        type: "string"
+      fullName:
+        type: "string"
+      email:
+        type: "string"
+      emailOptIn:
+        type: "string"
+    required:
+    - "accessLevel"
+    - "userId"
+    - "fullName"
+    - "email"
+    - "emailOptIn"
+  ShoppingCart:
+    properties:
+      cartId:
+        type: "integer"
+      creationDate:
+        type: "string"
+        format: "date-time"
+      lastUpdateDate:
+        type: "string"
+        format: "date-time"
+      status:
+        type: "integer"
+      userId:
+        type: "string"
+      userTypeCd:
+        type: "integer"
+      orderItems:
+        type: "array"
+        items:
+          $ref: "#/definitions/OrderItem"
+    required:
+    - "cartId"
+    - "creationDate"
+    - "lastUpdateDate"
+    - "status"
+    - "userId"
+    - "userTypeCd"
+    - "orderItems"
+  PriceCriteria:
+    properties:
+      itemCode:
+        type: "string"
+      price:
+        type: "number"
+        format: "float"
+      priceType:
+        type: "integer"
+  ReceiptItem:
+    properties:
+      format:
+        type: "string"
+      label:
+        type: "string"
+      value:
+        type: "string"
+    required:
+    - "format"
+    - "label"
+    - "value"
+  ReceiptLink:
+    properties:
+      label:
+        type: "string"
+      link:
+        type: "string"
+    required:
+    - "label"
+    - "link"
+  CardPayment:
+    properties:
+      accountBalance:
+        type: "string"
+      accountType:
+        type: "string"
+      amexCapCode:
+        type: "string"
+      amountPaid:
+        type: "string"
+      approvalCode:
+        type: "string"
+      authAttemptCount:
+        type: "integer"
+      authCode:
+        type: "string"
+      authorizationRequestSentTime:
+        type: "string"
+        format: "date"
+      authorizedAmount:
+        type: "string"
+      authResponse:
+        type: "string"
+      authSource:
+        type: "string"
+      avs:
+        type: "string"
+      avsResponse:
+        type: "string"
+      bankNumber:
+        type: "string"
+      cardExpirationMonth:
+        type: "string"
+      cardExpirationYear:
+        type: "string"
+      cardNumber:
+        type: "string"
+      cardSentTime:
+        type: "string"
+        format: "date-time"
+      cardType:
+        type: "string"
+      creditCardResponseCode:
+        type: "integer"
+      cvv2:
+        type: "string"
+      cvv2Response:
+        type: "string"
+      deviceType:
+        type: "string"
+      error:
+        type: "string"
+      fullName:
+        type: "string"
+      keyPtr:
+        type: "string"
+      merchantId:
+        type: "string"
+      msdi:
+        type: "string"
+      officeId:
+        type: "string"
+      orderNumber:
+        type: "integer"
+      pldSequenceNumber:
+        type: "integer"
+      ps2000Data:
+        type: "string"
+      recordNbr:
+        type: "string"
+      referenceNbr:
+        type: "string"
+      responseCode:
+        type: "string"
+      surchargeInd:
+        type: "string"
+      techId:
+        type: "string"
+      terminalNumber:
+        type: "string"
+      traceNbr:
+        type: "string"
+      transactionCompletedTime:
+        type: "string"
+        format: "date-time"
+      transactionStatus:
+        type: "string"
+      transDate:
+        type: "string"
+      transTime:
+        type: "string"
+      vendorId:
+        type: "string"
+    required:
+    - "accountBalance"
+    - "accountType"
+    - "amexCapCode"
+    - "amountPaid"
+    - "approvalCode"
+    - "authAttemptCount"
+    - "authorizationRequestSentTime"
+    - "authorizedAmount"
+    - "authResponse"
+    - "authSource"
+    - "avs"
+    - "avsResponse"
+    - "bankNumber"
+    - "cardExpirationMonth"
+    - "cardExpirationYear"
+    - "cardNumber"
+    - "cardSentTime"
+    - "cardType"
+    - "creditCardResponseCode"
+    - "cvv2"
+    - "cvv2Response"
+    - "deviceType"
+    - "error"
+    - "fullName"
+    - "keyPtr"
+    - "merchantId"
+    - "msdi"
+    - "officeId"
+    - "orderNumber"
+    - "pldSequenceNumber"
+    - "ps2000Data"
+    - "recordNbr"
+    - "referenceNbr"
+    - "responseCode"
+    - "surchargeInd"
+    - "techId"
+    - "terminalNumber"
+    - "transactionCompletedTime"
+    - "transactionStatus"
+    - "transDate"
+    - "transTime"
+    - "vendorId"
+  ECheckPayment:
+    properties:
+      acctHolderName:
+        type: "string"
+      amountPaid:
+        type: "string"
+      authAttemptCount:
+        type: "integer"
+      bankAcctNum:
+        type: "string"
+      bankRtngNum:
+        type: "string"
+      merchantId:
+        type: "string"
+      officeId:
+        type: "string"
+      orderNumber:
+        type: "integer"
+      techId:
+        type: "string"
+      terminalNumber:
+        type: "string"
+      transactionCompletedTime:
+        type: "string"
+        format: "date-time"
+      transactionStatus:
+        type: "string"
+      vendorId:
+        type: "string"
+  Status:
+    properties:
+      code:
+        type: "string"
+      description:
+        type: "string"
+      success:
+        type: "boolean"
+      updateCount:
+        type: "integer"
+    required:
+    - "code"
+    - "description"
+    - "success"
+    - "updateCount"
+  AddToCartRequest:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        properties:
+          User:
+            $ref: "#/definitions/User"
+          OrderItem:
+            $ref: "#/definitions/OrderItem"
+        required:
+        - "User"
+        - "OrderItem"
+    required:
+    - "payload"
+  AddToCartResponse:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        properties:
+          result:
+            type: "boolean"
+        required:
+        - "result"
+    required:
+    - "payload"
+  GetVeteranDecalsRequest:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+  GetVeteranDecalsResponse:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        properties:
+          veteranDecals:
+            type: "array"
+            items:
+              $ref: "#/definitions/VeteranDecals"
+        required:
+        - "veteranDecals"
+    required:
+    - "payload"
+  EligibleSequentialPlateReservationRequest:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        properties:
+          sequentialPlateRequest:
+            $ref: "#/definitions/SequentialPlateRequest"
+        required:
+        - "sequentialPlateRequest"
+    required:
+    - "payload"
+  EligibleSequentialPlateReservationResponse:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        type: "object"
+        properties:
+          sequentialPlateResponse:
+            $ref: "#/definitions/SequentialPlateResponse"
+        required:
+        - "sequentialPlateResponse"
+    required:
+    - "payload"
+  GetPlateDetailsRequest:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+  GetPlateDetailsResponse:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        type: "object"
+        properties:
+          plateDetails:
+            type: "array"
+            items:
+              $ref: "#/definitions/PlateDetails"
+        required:
+        - "plateDetails"
+    required:
+    - "payload"
+  EligiblePersonalizedPlateReservationRequest:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        properties:
+          personalizedPlateRequest:
+            $ref: "#/definitions/PersonalizedPlateRequest"
+        required:
+        - "personalizedPlateRequest"
+    required:
+    - "payload"
+  EligiblePersonalizedPlateReservationResponse:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        properties:
+          personalizedPlateResponse:
+            $ref: "#/definitions/PersonalizedPlateResponse"
+        required:
+        - "personalizedPlateResponse"
+    required:
+    - "payload"
+  ValidatePlateAndVin3Request:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        properties:
+          plateAndVin3Request:
+            $ref: "#/definitions/PlateAndVin3Request"
+  ValidatePlateAndVin3Response:
+    properties:
+      header:
+        $ref: "#/definitions/Header"
+      status:
+        $ref: "#/definitions/Status"
+      payload:
+        properties:
+          plateAndVin3Response:
+            $ref: "#/definitions/PlateAndVin3Response"
+paths:
+  /getVeteranDecals:
+    post:
+      operationId: "getVeteranDecals"
+      parameters:
+      - name: "body"
+        in: "body"
+        schema:
+          $ref: "#/definitions/GetVeteranDecalsRequest"
+      responses:
+        "200":
+          description: "OK response"
+          schema:
+            $ref: "#/definitions/GetVeteranDecalsResponse"
+  /eligibleSequentialPlateReservation:
+    post:
+      operationId: "eligibleSequentialPlateReservation"
+      parameters:
+      - name: "body"
+        in: "body"
+        schema:
+          $ref: "#/definitions/EligibleSequentialPlateReservationRequest"
+      responses:
+        "200":
+          description: "OK response"
+          schema:
+            $ref: "#/definitions/EligibleSequentialPlateReservationResponse"
+  /addToCart:
+    post:
+      operationId: "addToCart"
+      parameters:
+      - name: "body"
+        in: "body"
+        schema:
+          $ref: "#/definitions/AddToCartRequest"
+      responses:
+        "200":
+          description: "OK response"
+          schema:
+            $ref: "#/definitions/AddToCartResponse"
+  /getPlateDetails:
+    post:
+      operationId: "getPlateDetails"
+      parameters:
+      - name: "body"
+        in: "body"
+        schema:
+          $ref: "#/definitions/GetPlateDetailsRequest"
+      responses:
+        "200":
+          description: "OK response"
+          schema:
+            $ref: "#/definitions/GetPlateDetailsResponse"
+  /eligiblePersonalizedPlateReservation:
+    post:
+      operationId: "eligiblePersonalizedPlateReservation"
+      parameters:
+      - name: "body"
+        in: "body"
+        schema:
+          $ref: "#/definitions/EligiblePersonalizedPlateReservationRequest"
+      responses:
+        "200":
+          description: "OK response"
+          schema:
+            $ref: "#/definitions/EligiblePersonalizedPlateReservationResponse"
+  /validatePlateAndVin3:
+    post:
+      operationId: "validatePlateAndVin3"
+      parameters:
+      - name: "body"
+        in: "body"
+        schema:
+          $ref: "#/definitions/ValidatePlateAndVin3Request"
+      responses:
+        "200":
+          description: "OK response"
+          schema:
+            $ref: "#/definitions/ValidatePlateAndVin3Response"

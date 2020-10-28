@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created by TIBCO WSDL--><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://dmv.ca.gov/shoppingcart" xmlns:ns0="http://dmv.ca.gov/shoppingcart" xmlns:ns1="http://dmv.ca.gov/message/document" xmlns:ns2="http://dmv.ca.gov/message/header" xmlns:ns3="http://dmv.ca.gov/message/status" xmlns:ns4="http://dmv.ca.gov/shoppingcart" xmlns:ns5="http://schema.ipp.dmv.ca.gov" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.ipp.dmv.ca.gov" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <xsd:complexType name="ApplicationReceipt">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="itemDescription" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="itemPrice" type="xsd:decimal"/>
+                    <xsd:element minOccurs="0" name="itemTransactionType" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="orderItemId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="orderItemKey" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="status" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="receiptItem" type="ns0:ReceiptItem"/>
+                    <xsd:element minOccurs="0" name="receiptLink" type="ns0:ReceiptLink"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="CardPayment">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="accountBalance" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="accountType" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="amexCapCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="amountPaid" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="approvalCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="authAttemptCount" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="authCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="authorizationRequestSentTime" type="xsd:date"/>
+                    <xsd:element minOccurs="0" name="authorizedAmount" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="authResponse" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="authSource" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="avs" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="avsResponse" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="bankNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cardExpirationMonth" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cardExpirationYear" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cardNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cardSentTime" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="cardType" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="creditCardResponseCode" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="cvv2" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cvv2Response" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="deviceType" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="error" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="fullName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="keyPtr" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="merchantId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="msdi" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="officeId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="orderNumber" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="pldSequenceNumber" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="ps2000Data" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="recordNbr" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="referenceNbr" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="responseCode" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="surchargeInd" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="techId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="terminalNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="traceNbr" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="transactionCompletedTime" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="transactionStatus" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="transDate" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="transTime" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="vendorId" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ECheckPayment">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="acctHolderName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="amountPaid" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="authAttemptCount" type="xsd:int"/>
+                    <xsd:element name="bankAcctNum" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>ECheck generic attributes. This class includes attributes common to ECheck</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="bankRtngNum" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="merchantId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="officeId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="orderNumber" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="techId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="terminalNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="transactionCompletedTime" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="transactionStatus" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="vendorId" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="OrderItem">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="applicationInfo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cartId" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="consolidated" type="xsd:boolean"/>
+                    <xsd:element minOccurs="0" name="consolidatedItemNumber" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="creationDate" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="itemCd" type="xsd:string"/>
+                    <xsd:element name="language" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>en- English
+es- Spanish</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="lastAccessDate" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="orderId" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="orderItemKey" type="xsd:string"/>
+                    <xsd:element name="orderNumber" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation> The first 5 bytes are the julian date, the 6&lt;sup&gt;th&lt;/sup&gt; byte will have 1-9 for shopping cart transactions, and the last 6 are assigned to time value(e.g., for 11/10/08 = 083151102035 etc.)</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="orderPrice" type="xsd:decimal"/>
+                    <xsd:element minOccurs="0" name="quantity" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="sequence" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="status" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="transactionType" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="validationMessage" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="echeckPayment" type="ns0:ECheckPayment"/>
+                    <xsd:element minOccurs="0" name="cardPayment" type="ns0:CardPayment"/>
+                    <xsd:element minOccurs="0" name="paymentType" type="ns0:PaymentType"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:simpleType name="PaymentType">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="credit"/>
+                    <xsd:enumeration value="debit"/>
+                    <xsd:enumeration value="echeck"/>
+                    <xsd:enumeration value="na"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:complexType name="PriceCriteria">
+                <xsd:sequence>
+                    <xsd:element name="itemCode" type="xsd:string"/>
+                    <xsd:element name="price" type="xsd:float"/>
+                    <xsd:element name="priceType" type="xsd:int"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ReceiptItem">
+                <xsd:sequence>
+                    <xsd:element name="format" type="xsd:string"/>
+                    <xsd:element name="label" type="xsd:string"/>
+                    <xsd:element name="value" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ReceiptLink">
+                <xsd:sequence>
+                    <xsd:element name="label" type="xsd:string"/>
+                    <xsd:element name="link" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ShoppingCart">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="cartId" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="creationDate" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="lastUpdateDate" type="xsd:dateTime"/>
+                    <xsd:element name="status" type="xsd:int">
+                        <xsd:annotation>
+                            <xsd:documentation>0-completed
+1-pending
+2-cancelled</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="userId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="userTypeCd" type="xsd:int"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="orderItems" type="ns0:OrderItem"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="User">
+                <xsd:sequence>
+                    <xsd:element name="accessLevel" type="xsd:int"/>
+                    <xsd:element name="userId" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="fullName" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="email" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="emailOptIn" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="ApplicationReceipt" type="ns0:ApplicationReceipt"/>
+            <xsd:element name="CardPayment" type="ns0:CardPayment"/>
+            <xsd:element name="ECheckPayment" type="ns0:ECheckPayment"/>
+            <xsd:element name="OrderItem" type="ns0:OrderItem"/>
+            <xsd:element name="PriceCriteria" type="ns0:PriceCriteria"/>
+            <xsd:element name="ReceiptItem" type="ns0:ReceiptItem"/>
+            <xsd:element name="ReceiptLink" type="ns0:ReceiptLink"/>
+            <xsd:element name="ShoppingCart" type="ns0:ShoppingCart"/>
+            <xsd:element name="User" type="ns0:User"/>
+        </xsd:schema>
