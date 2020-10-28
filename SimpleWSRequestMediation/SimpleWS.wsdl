@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="SimpleWS" targetNamespace="http://SimpleWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://SimpleWS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="SimpleWSHttpBinding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  
+  
+  
+  <wsdl:types>
+    
+        <xsd:schema targetNamespace="http://SimpleWS" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+<xsd:include schemaLocation="SimpleWS_InlineSchema1.xsd"/>
+</xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="operation1RequestMsg">
+    <wsdl:part element="tns:operation1" name="operation1Parameters"/>
+  </wsdl:message>
+  <wsdl:message name="operation1ResponseMsg">
+    <wsdl:part element="tns:operation1Response" name="operation1Result"/>
+  </wsdl:message>
+    <wsdl:message name="operation2RequestMsg">
+    <wsdl:part element="tns:operation2" name="operation2Parameters"/>
+  </wsdl:message>
+    <wsdl:message name="operation2ResponseMsg">
+    <wsdl:part element="tns:operation2Response" name="operation2Result"/>
+  </wsdl:message>
+    <wsdl:portType name="SimpleWS">
+    <wsdl:operation name="operation1">
+      <wsdl:input message="tns:operation1RequestMsg" name="operation1Request"/>
+      <wsdl:output message="tns:operation1ResponseMsg" name="operation1Response"/>
+    </wsdl:operation>
+        <wsdl:operation name="operation2">
+      <wsdl:input message="tns:operation2RequestMsg" name="operation2Request"/>
+      <wsdl:output message="tns:operation2ResponseMsg" name="operation2Response"/>
+    </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SimpleWSHttpBinding" type="tns:SimpleWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="operation1">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="operation1Request">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="operation1Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="operation2">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="operation2Request">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="operation2Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+    <wsdl:service name="SimpleWSHttpService">
+    <wsdl:port binding="tns:SimpleWSHttpBinding" name="SimpleWSHttpPort">
+      <soap:address location="/SimpleWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
